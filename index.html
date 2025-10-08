@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b0b0b" />
+    <title>From Nature to Comfort — Scroll 3D Journey</title>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <!-- Pinned WebGL Canvas -->
+    <canvas id="webgl" aria-label="3D storytelling canvas"></canvas>
+
+    <!-- Minimal UI Overlay -->
+    <div id="ui" aria-live="polite">
+      <div class="top-bar">
+        <div class="brand">
+          <span class="logo-mark" aria-hidden="true">✦</span>
+          <span class="logo-text">From Nature to Comfort</span>
+        </div>
+        <div class="controls">
+          <button id="audio-toggle" class="btn" aria-pressed="false" aria-label="Toggle audio">🔈</button>
+        </div>
+      </div>
+
+      <div id="loader" role="status" aria-label="Loading">
+        <div class="bar"><span class="fill" style="width:0%"></span></div>
+        <div class="hint">Loading immersive scene…</div>
+      </div>
+
+      <div id="tagline" class="fade-in">From Nature to Comfort</div>
+    </div>
+
+    <!-- Scroll Sections (content-light; used to drive the timeline) -->
+    <main id="scroll-sections">
+      <section class="section" data-scene="1">
+        <h2>Scene 1 — The Dry Tree</h2>
+        <p>A quiet forest. A lone, weathered tree.</p>
+      </section>
+      <section class="section" data-scene="2">
+        <h2>Scene 2 — Cutting Stage</h2>
+        <p>Cinematic motion follows the decisive cut.</p>
+      </section>
+      <section class="section" data-scene="3">
+        <h2>Scene 3 — Log to Wood Planks</h2>
+        <p>Precision machinery shapes raw logs into planks.</p>
+      </section>
+      <section class="section" data-scene="4">
+        <h2>Scene 4 — Assembly Stage</h2>
+        <p>Joinery and craft form the bed frame.</p>
+      </section>
+      <section class="section" data-scene="5">
+        <h2>Scene 5 — Finishing & Polishing</h2>
+        <p>A warm, glossy finish reveals the grain.</p>
+      </section>
+      <section class="section" data-scene="6">
+        <h2>Scene 6 — Final Product Reveal</h2>
+        <p>Comfort realized. Minimal, cozy, complete.</p>
+      </section>
+    </main>
+
+    <!-- GSAP + ScrollTrigger (globals) -->
+    <script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <!-- App -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+  </html>
+
